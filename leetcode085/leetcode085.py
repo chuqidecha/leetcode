@@ -26,7 +26,7 @@ class Solution:
             stack = []
             j = 0
             while j < cols + 1:
-                if len(stack) == 0 or hists[i][j] > hists[i][stack[len(stack) - 1]]:
+                if len(stack) == 0 or hists[i][j] >= hists[i][stack[len(stack) - 1]]:
                     stack.append(j)
                     j += 1
                 else:
