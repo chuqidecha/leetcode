@@ -10,23 +10,23 @@ You have the following 3 operations permitted on a word:
 
 **Example 1:**
 
-> **Input**: word1 = "horse", word2 = "ros"
-> **Output**: 3
-> **Explanation**:
-> horse -> rorse (replace 'h' with 'r')
-> rorse -> rose (remove 'r')
-> rose -> ros (remove 'e')
+> **Input**: word1 = "horse", word2 = "ros"   
+> **Output**: 3   
+> **Explanation**:   
+> horse -> rorse (replace 'h' with 'r')   
+> rorse -> rose (remove 'r')   
+> rose -> ros (remove 'e')   
 
 **Example 2:**
 
-> **Input**: word1 = "intention", word2 = "execution"
-> **Output**: 5
-> **Explanation**:
-> intention -> inention (remove 't')
-> inention -> enention (replace 'i' with 'e')
-> enention -> exention (replace 'n' with 'x')
-> exention -> exection (replace 'n' with 'c')
-> exection -> execution (insert 'u')
+> **Input**: word1 = "intention", word2 = "execution"   
+> **Output**: 5   
+> **Explanation**:   
+> intention -> inention (remove 't')   
+> inention -> enention (replace 'i' with 'e')   
+> enention -> exention (replace 'n' with 'x')   
+> exention -> exection (replace 'n' with 'c')   
+> exection -> execution (insert 'u')   
 
 题目大意是求一个字符串变成另一个字符串需要的最少操作数，一共有删除一个字符、插入一个字符和替换一个字符3中操作。
 这种题目一般通过动态规划来求解。假设dp[i][j]表示word1[:i]到word[:j]需要的最少操作次数。求dp[i+1][j+1]时，
